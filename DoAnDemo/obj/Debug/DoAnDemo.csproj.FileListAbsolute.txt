@@ -1,0 +1,101 @@
+D:\Project\C# AI\DoAnDemo\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+D:\Project\C# AI\DoAnDemo\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+D:\Project\C# AI\DoAnDemo\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+D:\Project\C# AI\DoAnDemo\bin\Debug\DoAnDemo.exe.config
+D:\Project\C# AI\DoAnDemo\bin\Debug\DoAnDemo.exe
+D:\Project\C# AI\DoAnDemo\bin\Debug\DoAnDemo.pdb
+D:\Project\C# AI\DoAnDemo\bin\Debug\Guna.UI2.dll
+D:\Project\C# AI\DoAnDemo\bin\Debug\Microsoft.CSharp.dll
+D:\Project\C# AI\DoAnDemo\bin\Debug\Microsoft.Web.WebView2.Core.dll
+D:\Project\C# AI\DoAnDemo\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+D:\Project\C# AI\DoAnDemo\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+D:\Project\C# AI\DoAnDemo\bin\Debug\QRCoder.dll
+D:\Project\C# AI\DoAnDemo\bin\Debug\Microsoft.Web.WebView2.Core.xml
+D:\Project\C# AI\DoAnDemo\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+D:\Project\C# AI\DoAnDemo\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.csproj.AssemblyReference.cache
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.AdminForm.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.FormChiTietMonAn.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.FormDangNhap.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.FormThanhToan.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormAddMember.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormEditMember.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormMember.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormNhanVien.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormQuanLy.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormQuanLyGiamGiaList.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormSuaChiNhanh.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormThemNhanVien.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormTrangChuAdmin.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.GiamGia.DiscountButtonCard.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.FormGiamGia.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.DonHangCard.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.HienThiGoc.FormHienThi.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.HienThiGoc.MenuItemCard.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.HienThiGoc.OrderItemCard.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.AppContainerForm.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.MainForm.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Properties.Resources.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.FormThongTinTV.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Gift.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.MonAnTV.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Voucher.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.csproj.GenerateResource.cache
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.csproj.CoreCompileInputs.cache
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.csproj.Up2Date
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.exe
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.pdb
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormDetailMember.resources
+D:\Project\C# AI\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormSendVoucher.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.csproj.AssemblyReference.cache
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.AdminForm.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.FormChiTietMonAn.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.FormDangNhap.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.FormThanhToan.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormAddMember.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormAddVoucher.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormAddVoucherStore.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormDetailMember.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormEditMember.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormEditVoucher.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormMember.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormNhanVien.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormQuanLy.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormQuanLyGiamGiaList.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormSendVoucher.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormSuaChiNhanh.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormThemNhanVien.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Form.FormAdmin.FormTrangChuAdmin.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.GiamGia.DiscountButtonCard.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.FormGiamGia.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.DonHangCard.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.HienThiGoc.FormHienThi.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.HienThiGoc.MenuItemCard.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.HienThiGoc.OrderItemCard.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.AppContainerForm.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.MainForm.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Properties.Resources.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.FormThongTinTV.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Gift.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.MonAnTV.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.Voucher.resources
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.csproj.GenerateResource.cache
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\DoAnDemo.exe.config
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\DoAnDemo.exe
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\DoAnDemo.pdb
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\Guna.UI2.dll
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\Microsoft.CSharp.dll
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\Microsoft.Web.WebView2.Core.dll
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\QRCoder.dll
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\Microsoft.Web.WebView2.Core.xml
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\ACER\Documents\DoAnDemo\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.csproj.Up2Date
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.exe
+C:\Users\ACER\Documents\DoAnDemo\obj\Debug\DoAnDemo.pdb

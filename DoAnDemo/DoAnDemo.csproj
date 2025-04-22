@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37199ECD-B5E1-4589-A687-43383635598F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DoAnDemo</RootNamespace>
+    <AssemblyName>DoAnDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.3179.45, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.WebView2.1.0.3179.45\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.3179.45, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.WebView2.1.0.3179.45\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.3179.45, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.WebView2.1.0.3179.45\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.6.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLogicLayer\Interfaces\IAuthService.cs" />
+    <Compile Include="BusinessLogicLayer\Interfaces\ICuaHangService.cs" />
+    <Compile Include="BusinessLogicLayer\Interfaces\IDiscountService.cs" />
+    <Compile Include="BusinessLogicLayer\Interfaces\IMemberService.cs" />
+    <Compile Include="BusinessLogicLayer\Interfaces\INhanVienService.cs" />
+    <Compile Include="BusinessLogicLayer\Interfaces\IOrderQueryService.cs" />
+    <Compile Include="BusinessLogicLayer\Interfaces\IPaymentProcessingService.cs" />
+    <Compile Include="BusinessLogicLayer\Interfaces\IProductService.cs" />
+    <Compile Include="BusinessLogicLayer\Interfaces\IThongKeService.cs" />
+    <Compile Include="BusinessLogicLayer\Interfaces\IVoucherAdminService.cs" />
+    <Compile Include="BusinessLogicLayer\Services\AuthService.cs" />
+    <Compile Include="BusinessLogicLayer\Services\CuaHangService.cs" />
+    <Compile Include="BusinessLogicLayer\Services\DiscountService.cs" />
+    <Compile Include="BusinessLogicLayer\Services\MemberService.cs" />
+    <Compile Include="BusinessLogicLayer\Services\NhanVienService.cs" />
+    <Compile Include="BusinessLogicLayer\Services\OrderQueryService.cs" />
+    <Compile Include="BusinessLogicLayer\Services\PaymentProcessingService.cs" />
+    <Compile Include="BusinessLogicLayer\Services\ProductService.cs" />
+    <Compile Include="BusinessLogicLayer\Services\ThongKeService.cs" />
+    <Compile Include="BusinessLogicLayer\Services\VoucherAdminService.cs" />
+    <Compile Include="DataLayer\FastFood.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FastFood.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DatBan\BillItemRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatBan\BillItemRow.Designer.cs">
+      <DependentUpon>BillItemRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatBan\FormDanhSachDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatBan\FormDanhSachDonHang.Designer.cs">
+      <DependentUpon>FormDanhSachDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatBan\FormDatBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatBan\FormDatBan.Designer.cs">
+      <DependentUpon>FormDatBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatBan\TableCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatBan\TableCard.Designer.cs">
+      <DependentUpon>TableCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChiTietMonAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormChiTietMonAn.Designer.cs">
+      <DependentUpon>FormChiTietMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChuaThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormChuaThanhToan.Designer.cs">
+      <DependentUpon>FormChuaThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLCa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormQLCa.Designer.cs">
+      <DependentUpon>FormQLCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormThanhToan.Designer.cs">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrangThaiThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormTrangThaiThanhToan.Designer.cs">
+      <DependentUpon>FormTrangThaiThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormAddMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormAddMember.Designer.cs">
+      <DependentUpon>FormAddMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormAddVoucher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormAddVoucher.Designer.cs">
+      <DependentUpon>FormAddVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormAddVoucherStore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormAddVoucherStore.Designer.cs">
+      <DependentUpon>FormAddVoucherStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormDetailMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormDetailMember.Designer.cs">
+      <DependentUpon>FormDetailMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormEditVoucher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormEditVoucher.Designer.cs">
+      <DependentUpon>FormEditVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormMember.Designer.cs">
+      <DependentUpon>FormMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormNhanVien.Designer.cs">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormQuanLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormQuanLy.Designer.cs">
+      <DependentUpon>FormQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormQuanLyChiNhanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormQuanLyChiNhanh.Designer.cs">
+      <DependentUpon>FormQuanLyChiNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormQuanLyGiamGiaList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormQuanLyGiamGiaList.Designer.cs">
+      <DependentUpon>FormQuanLyGiamGiaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormSanPham.Designer.cs">
+      <DependentUpon>FormSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormSendVoucher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormSendVoucher.Designer.cs">
+      <DependentUpon>FormSendVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormSuaChiNhanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormSuaChiNhanh.Designer.cs">
+      <DependentUpon>FormSuaChiNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormSuaNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormSuaNhanVien.Designer.cs">
+      <DependentUpon>FormSuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormEditMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormEditMember.Designer.cs">
+      <DependentUpon>FormEditMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormThemNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormThemNhanVien.Designer.cs">
+      <DependentUpon>FormThemNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormTrangChuAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\FormAdmin\FormTrangChuAdmin.Designer.cs">
+      <DependentUpon>FormTrangChuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiamGia\DiscountButtonCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GiamGia\DiscountButtonCard.Designer.cs">
+      <DependentUpon>DiscountButtonCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiamGia\FormGiamGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GiamGia\FormGiamGia.Designer.cs">
+      <DependentUpon>FormGiamGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoDichTrongNgay\DonHangCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GiaoDichTrongNgay\DonHangCard.Designer.cs">
+      <DependentUpon>DonHangCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoDichTrongNgay\FormGiaoDichNgay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GiaoDichTrongNgay\FormGiaoDichNgay.Designer.cs">
+      <DependentUpon>FormGiaoDichNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HienThiGoc\FormHienThi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HienThiGoc\FormHienThi.Designer.cs">
+      <DependentUpon>FormHienThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HienThiGoc\MenuItemCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HienThiGoc\MenuItemCard.Designer.cs">
+      <DependentUpon>MenuItemCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HienThiGoc\OrderItemCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HienThiGoc\OrderItemCard.Designer.cs">
+      <DependentUpon>OrderItemCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppContainerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppContainerForm.Designer.cs">
+      <DependentUpon>AppContainerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DiscountInfo.cs" />
+    <Compile Include="Models\LoggedInUserInfo.cs" />
+    <Compile Include="Models\MemberStatsViewModel.cs" />
+    <Compile Include="Models\MemberViewModel.cs" />
+    <Compile Include="Models\NhanVienViewModel.cs" />
+    <Compile Include="Models\OrderPaymentInfo.cs" />
+    <Compile Include="Models\OrderSummaryViewModel.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
+    <Compile Include="Models\RegistrationCompleteEventArgs.cs" />
+    <Compile Include="Models\SelectionViewModel.cs" />
+    <Compile Include="Models\StoreViewModel.cs" />
+    <Compile Include="PaymentEventArgs.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveCompleteEventArgs.cs" />
+    <Compile Include="ShowDiscountEventArgs.cs" />
+    <Compile Include="ThanhVien\FormDangKyTV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThanhVien\FormDangKyTV.Designer.cs">
+      <DependentUpon>FormDangKyTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThanhVien\FormThongTinTV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThanhVien\FormThongTinTV.Designer.cs">
+      <DependentUpon>FormThongTinTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThanhVien\Gift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThanhVien\Gift.Designer.cs">
+      <DependentUpon>Gift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThanhVien\MonAnTV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThanhVien\MonAnTV.Designer.cs">
+      <DependentUpon>MonAnTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThanhVien\Voucher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThanhVien\Voucher.Designer.cs">
+      <DependentUpon>Voucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\CurrentAdminInfo.cs" />
+    <Compile Include="Utils\CurrentUserContext.cs" />
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChiTietMonAn.resx">
+      <DependentUpon>FormChiTietMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThanhToan.resx">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormAddMember.resx">
+      <DependentUpon>FormAddMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormAddVoucher.resx">
+      <DependentUpon>FormAddVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormAddVoucherStore.resx">
+      <DependentUpon>FormAddVoucherStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormDetailMember.resx">
+      <DependentUpon>FormDetailMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormEditMember.resx">
+      <DependentUpon>FormEditMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormEditVoucher.resx">
+      <DependentUpon>FormEditVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormMember.resx">
+      <DependentUpon>FormMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormNhanVien.resx">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormQuanLy.resx">
+      <DependentUpon>FormQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormQuanLyGiamGiaList.resx">
+      <DependentUpon>FormQuanLyGiamGiaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormSendVoucher.resx">
+      <DependentUpon>FormSendVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormSuaChiNhanh.resx">
+      <DependentUpon>FormSuaChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormThemNhanVien.resx">
+      <DependentUpon>FormThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormAdmin\FormTrangChuAdmin.resx">
+      <DependentUpon>FormTrangChuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiamGia\DiscountButtonCard.resx">
+      <DependentUpon>DiscountButtonCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiamGia\FormGiamGia.resx">
+      <DependentUpon>FormGiamGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoDichTrongNgay\DonHangCard.resx">
+      <DependentUpon>DonHangCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HienThiGoc\FormHienThi.resx">
+      <DependentUpon>FormHienThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HienThiGoc\MenuItemCard.resx">
+      <DependentUpon>MenuItemCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HienThiGoc\OrderItemCard.resx">
+      <DependentUpon>OrderItemCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppContainerForm.resx">
+      <DependentUpon>AppContainerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ThanhVien\FormThongTinTV.resx">
+      <DependentUpon>FormThongTinTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanhVien\Gift.resx">
+      <DependentUpon>Gift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanhVien\MonAnTV.resx">
+      <DependentUpon>MonAnTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanhVien\Voucher.resx">
+      <DependentUpon>Voucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataLayer\FastFood.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FastFood.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataLayer\FastFood.dbml.layout">
+      <DependentUpon>FastFood.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="packages\Guna.UI2.WinForms.2.0.4.7\.signature.p7s" />
+    <None Include="packages\Guna.UI2.WinForms.2.0.4.7\Guna.UI2.WinForms.2.0.4.7.nupkg" />
+    <None Include="packages\Guna.UI2.WinForms.2.0.4.7\README.md" />
+    <None Include="packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\.signature.p7s" />
+    <None Include="packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\Microsoft.Bcl.AsyncInterfaces.6.0.0.nupkg" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\.signature.p7s" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\MonoAndroid10\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\MonoTouch10\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\net45\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\netcoreapp2.0\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\portable-net45+win8+wp8+wpa81\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\uap10.0.16299\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\win8\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\wp80\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\wpa81\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\xamarinios10\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\xamarinmac20\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\xamarintvos10\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\lib\xamarinwatchos10\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\Microsoft.CSharp.4.7.0.nupkg" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\MonoAndroid10\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\MonoTouch10\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\net45\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\netcoreapp2.0\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\portable-net45+win8+wp8+wpa81\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\uap10.0.16299\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\win8\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\wp80\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\wpa81\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\xamarinios10\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\xamarinmac20\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\xamarintvos10\_._" />
+    <None Include="packages\Microsoft.CSharp.4.7.0\ref\xamarinwatchos10\_._" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\.signature.p7s" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\buildTransitive\Microsoft.Web.WebView2.targets" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\Common.targets" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\Microsoft.Web.WebView2.targets" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\arm64\WebView2Loader.dll.lib" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\arm64\WebView2LoaderStatic.lib" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\include-winrt\WebView2Interop.tlb" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\Microsoft.Web.WebView2.targets" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\x64\WebView2Loader.dll.lib" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\x64\WebView2LoaderStatic.lib" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\x86\WebView2Loader.dll.lib" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\x86\WebView2LoaderStatic.lib" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\wv2winrt.targets" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib\Microsoft.Web.WebView2.Core.winmd" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\Microsoft.Web.WebView2.1.0.3179.45.nupkg" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\winrt_winmd.winmd" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\wv2winrt.exe.config" />
+    <None Include="packages\Microsoft.Web.WebView2.1.0.3179.45\WebView2.tlb" />
+    <None Include="packages\Newtonsoft.Json.13.0.1\.signature.p7s" />
+    <None Include="packages\Newtonsoft.Json.13.0.1\LICENSE.md" />
+    <None Include="packages\Newtonsoft.Json.13.0.1\Newtonsoft.Json.13.0.1.nupkg" />
+    <None Include="packages\Rebus.8.0.1\.signature.p7s" />
+    <None Include="packages\Rebus.8.0.1\README.md" />
+    <None Include="packages\Rebus.8.0.1\Rebus.8.0.1.nupkg" />
+    <None Include="packages\System.Buffers.4.5.1\.signature.p7s" />
+    <None Include="packages\System.Buffers.4.5.1\lib\netcoreapp2.0\_._" />
+    <None Include="packages\System.Buffers.4.5.1\lib\uap10.0.16299\_._" />
+    <None Include="packages\System.Buffers.4.5.1\ref\netcoreapp2.0\_._" />
+    <None Include="packages\System.Buffers.4.5.1\ref\uap10.0.16299\_._" />
+    <None Include="packages\System.Buffers.4.5.1\System.Buffers.4.5.1.nupkg" />
+    <None Include="packages\System.Memory.4.5.4\.signature.p7s" />
+    <None Include="packages\System.Memory.4.5.4\lib\netcoreapp2.1\_._" />
+    <None Include="packages\System.Memory.4.5.4\ref\netcoreapp2.1\_._" />
+    <None Include="packages\System.Memory.4.5.4\System.Memory.4.5.4.nupkg" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\.signature.p7s" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\MonoAndroid10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\MonoTouch10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\netcoreapp2.0\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\uap10.0.16299\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\xamarinios10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\xamarinmac20\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\xamarintvos10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\xamarinwatchos10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\MonoAndroid10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\MonoTouch10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\netcoreapp2.0\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\uap10.0.16299\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\xamarinios10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\xamarinmac20\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\xamarintvos10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\xamarinwatchos10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\System.Numerics.Vectors.4.5.0.nupkg" />
+    <None Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\.signature.p7s" />
+    <None Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\buildTransitive\netcoreapp2.0\System.Runtime.CompilerServices.Unsafe.targets" />
+    <None Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <None Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\System.Runtime.CompilerServices.Unsafe.6.0.0.nupkg" />
+    <None Include="packages\System.Text.Encodings.Web.6.0.0\.signature.p7s" />
+    <None Include="packages\System.Text.Encodings.Web.6.0.0\buildTransitive\netcoreapp2.0\System.Text.Encodings.Web.targets" />
+    <None Include="packages\System.Text.Encodings.Web.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <None Include="packages\System.Text.Encodings.Web.6.0.0\System.Text.Encodings.Web.6.0.0.nupkg" />
+    <None Include="packages\System.Text.Json.6.0.0\.signature.p7s" />
+    <None Include="packages\System.Text.Json.6.0.0\buildTransitive\netcoreapp2.0\System.Text.Json.targets" />
+    <None Include="packages\System.Text.Json.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <None Include="packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" />
+    <None Include="packages\System.Text.Json.6.0.0\System.Text.Json.6.0.0.nupkg" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\.signature.p7s" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\MonoAndroid10\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\MonoTouch10\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\netcoreapp2.1\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\xamarinios10\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\xamarinmac20\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\xamarintvos10\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\xamarinwatchos10\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\MonoAndroid10\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\MonoTouch10\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\netcoreapp2.1\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\xamarinios10\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\xamarinmac20\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\xamarintvos10\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\xamarinwatchos10\_._" />
+    <None Include="packages\System.Threading.Tasks.Extensions.4.5.4\System.Threading.Tasks.Extensions.4.5.4.nupkg" />
+    <None Include="packages\System.ValueTuple.4.5.0\.signature.p7s" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\MonoAndroid10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\MonoTouch10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\netcoreapp2.0\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\netstandard2.0\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\uap10.0.16299\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\xamarinios10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\xamarinmac20\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\xamarintvos10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\xamarinwatchos10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\MonoAndroid10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\MonoTouch10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\netcoreapp2.0\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\netstandard2.0\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\uap10.0.16299\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\xamarinios10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\xamarinmac20\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\xamarintvos10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\xamarinwatchos10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\System.ValueTuple.4.5.0.nupkg" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.7\icon.png" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.7\lib\net40\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.7\lib\net45\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.7\lib\net461\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.7\lib\net6.0-windows7.0\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.7\lib\net7.0-windows7.0\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.7\lib\netcoreapp3.1\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.7\LICENSE.txt" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\Icon.png" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.xml" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.xml" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.xml" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\LICENSE.TXT" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\lib\netcore50\Microsoft.CSharp.dll" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\lib\netstandard1.3\Microsoft.CSharp.dll" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\lib\netstandard2.0\Microsoft.CSharp.dll" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\lib\netstandard2.0\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\LICENSE.TXT" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netcore50\de\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netcore50\es\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netcore50\fr\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netcore50\it\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netcore50\ja\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netcore50\ko\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netcore50\Microsoft.CSharp.dll" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netcore50\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netcore50\ru\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netcore50\zh-hans\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netcore50\zh-hant\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard1.0\de\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard1.0\es\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard1.0\fr\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard1.0\it\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard1.0\ja\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard1.0\ko\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard1.0\Microsoft.CSharp.dll" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard1.0\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard1.0\ru\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard1.0\zh-hans\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard1.0\zh-hant\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard2.0\Microsoft.CSharp.dll" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\ref\netstandard2.0\Microsoft.CSharp.xml" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\Microsoft.CSharp.4.7.0\version.txt" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\arm64\WebView2Loader.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\include-winrt\WebView2Interop.h" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\include-winrt\WebView2Interop.idl" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\include\WebView2.h" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\include\WebView2EnvironmentOptions.h" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\x64\WebView2Loader.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\x86\WebView2Loader.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\build\WebView2Rules.Project.xml" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib\net462\Microsoft.Web.WebView2.Core.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib\net462\Microsoft.Web.WebView2.Core.xml" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib\net462\Microsoft.Web.WebView2.WinForms.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib\net462\Microsoft.Web.WebView2.WinForms.xml" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib\net462\Microsoft.Web.WebView2.Wpf.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib\net462\Microsoft.Web.WebView2.Wpf.xml" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib_manual\net5.0-windows10.0.17763.0\Microsoft.Web.WebView2.Wpf.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib_manual\net5.0-windows10.0.17763.0\Microsoft.Web.WebView2.Wpf.xml" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib_manual\net6.0-windows10.0.17763.0\Microsoft.Web.WebView2.Core.Projection.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib_manual\net8.0-windows10.0.17763.0\Microsoft.Web.WebView2.Core.Projection.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.Core.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.Core.xml" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.WinForms.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.WinForms.xml" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.Wpf.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.Wpf.xml" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\LICENSE.txt" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\NOTICE.txt" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\runtimes\win-arm64\native\WebView2Loader.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\runtimes\win-arm64\native_uap\Microsoft.Web.WebView2.Core.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\runtimes\win-x64\native\WebView2Loader.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\runtimes\win-x64\native_uap\Microsoft.Web.WebView2.Core.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\runtimes\win-x86\native\WebView2Loader.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\runtimes\win-x86\native_uap\Microsoft.Web.WebView2.Core.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\VisualStudioToolsManifest.xml" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\Antlr3.Runtime.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\Antlr4.StringTemplate.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\codegen_util.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\concrt140_app.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\cs\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\de\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\es\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\fr\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\it\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\ja\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\ko\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\msvcp140_1_app.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\msvcp140_2_app.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\msvcp140_app.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\pl\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\pt-BR\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\ru\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\System.Buffers.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\System.CommandLine.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\System.CommandLine.DragonFruit.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\System.CommandLine.Rendering.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\System.Memory.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\System.Numerics.Vectors.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\tr\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\type_hierarchy.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\vcamp140_app.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\vccorlib140_app.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\vcomp140_app.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\vcruntime140_app.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\winrt_winmd.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\wv2winrt.exe" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\wv2winrt.xml" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\zh-Hans\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\tools\wv2winrt\zh-Hant\System.CommandLine.resources.dll" />
+    <Content Include="packages\Microsoft.Web.WebView2.1.0.3179.45\WebView2.idl" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\netstandard1.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\netstandard1.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\netstandard1.3\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\netstandard1.3\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\netstandard2.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\packageIcon.png" />
+    <Content Include="packages\Rebus.8.0.1\lib\netstandard2.0\Rebus.dll" />
+    <Content Include="packages\Rebus.8.0.1\lib\netstandard2.0\Rebus.pdb" />
+    <Content Include="packages\Rebus.8.0.1\lib\netstandard2.0\Rebus.xml" />
+    <Content Include="packages\Rebus.8.0.1\little_rebusbus2_copy-500x500.png" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\net461\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\netstandard2.0\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\netstandard2.0\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\LICENSE.TXT" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\net45\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\net45\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\netstandard1.1\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\netstandard1.1\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\netstandard2.0\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\netstandard2.0\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Buffers.4.5.1\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Buffers.4.5.1\version.txt" />
+    <Content Include="packages\System.Memory.4.5.4\lib\net461\System.Memory.dll" />
+    <Content Include="packages\System.Memory.4.5.4\lib\net461\System.Memory.xml" />
+    <Content Include="packages\System.Memory.4.5.4\lib\netstandard1.1\System.Memory.dll" />
+    <Content Include="packages\System.Memory.4.5.4\lib\netstandard1.1\System.Memory.xml" />
+    <Content Include="packages\System.Memory.4.5.4\lib\netstandard2.0\System.Memory.dll" />
+    <Content Include="packages\System.Memory.4.5.4\lib\netstandard2.0\System.Memory.xml" />
+    <Content Include="packages\System.Memory.4.5.4\LICENSE.TXT" />
+    <Content Include="packages\System.Memory.4.5.4\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Memory.4.5.4\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Memory.4.5.4\version.txt" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\netstandard1.0\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\netstandard1.0\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\netstandard2.0\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\netstandard2.0\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\portable-net45+win8+wp8+wpa81\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\portable-net45+win8+wp8+wpa81\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\LICENSE.TXT" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\net45\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\net45\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\net46\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\net46\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\netstandard1.0\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\netstandard1.0\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\netstandard2.0\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\netstandard2.0\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\version.txt" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\Icon.png" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net6.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net6.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\LICENSE.TXT" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\Icon.png" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.xml" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\lib\net6.0\System.Text.Encodings.Web.dll" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\lib\net6.0\System.Text.Encodings.Web.xml" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\lib\netcoreapp3.1\System.Text.Encodings.Web.dll" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\lib\netcoreapp3.1\System.Text.Encodings.Web.xml" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\lib\netstandard2.0\System.Text.Encodings.Web.dll" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\lib\netstandard2.0\System.Text.Encodings.Web.xml" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\LICENSE.TXT" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.xml" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Text.Encodings.Web.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\cs\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\de\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\es\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\fr\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\it\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\ja\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\ko\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\pl\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\pt-BR\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\ru\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\System.Text.Json.SourceGeneration.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\tr\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\zh-Hans\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn3.11\cs\zh-Hant\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\cs\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\de\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\es\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\fr\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\it\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\ja\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\ko\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\pl\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\pt-BR\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\ru\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\System.Text.Json.SourceGeneration.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\tr\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\zh-Hans\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\analyzers\dotnet\roslyn4.0\cs\zh-Hant\System.Text.Json.SourceGeneration.resources.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\Icon.png" />
+    <Content Include="packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.xml" />
+    <Content Include="packages\System.Text.Json.6.0.0\lib\net6.0\System.Text.Json.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\lib\net6.0\System.Text.Json.xml" />
+    <Content Include="packages\System.Text.Json.6.0.0\lib\netcoreapp3.1\System.Text.Json.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\lib\netcoreapp3.1\System.Text.Json.xml" />
+    <Content Include="packages\System.Text.Json.6.0.0\lib\netstandard2.0\System.Text.Json.dll" />
+    <Content Include="packages\System.Text.Json.6.0.0\lib\netstandard2.0\System.Text.Json.xml" />
+    <Content Include="packages\System.Text.Json.6.0.0\LICENSE.TXT" />
+    <Content Include="packages\System.Text.Json.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Text.Json.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\netstandard1.0\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\netstandard1.0\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\netstandard2.0\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\LICENSE.TXT" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\version.txt" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.xml" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.xml" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.xml" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\portable-net40+sl4+win8+wp8\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\portable-net40+sl4+win8+wp8\System.ValueTuple.xml" />
+    <Content Include="packages\System.ValueTuple.4.5.0\LICENSE.TXT" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\net461\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\net47\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\portable-net40+sl4+win8+wp8\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.ValueTuple.4.5.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.ValueTuple.4.5.0\version.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Microsoft.Web.WebView2.1.0.3179.45\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.3179.45\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Web.WebView2.1.0.3179.45\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Web.WebView2.1.0.3179.45\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+</Project>

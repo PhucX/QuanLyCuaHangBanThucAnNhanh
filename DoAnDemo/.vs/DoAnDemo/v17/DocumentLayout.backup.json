@@ -1,0 +1,256 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ACER\\Documents\\DoAnDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formmember.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formmember.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\businesslogiclayer\\services\\voucheradminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:businesslogiclayer\\services\\voucheradminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formeditmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formeditmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formeditvoucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formeditvoucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formeditmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formeditmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formquanlygiamgialist.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formquanlygiamgialist.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formtrangchuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formtrangchuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formtrangchuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formtrangchuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formquanlygiamgialist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formquanlygiamgialist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|c:\\users\\acer\\documents\\doandemo\\form\\formadmin\\formquanlygiamgialist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37199ECD-B5E1-4589-A687-43383635598F}|DoAnDemo.csproj|solutionrelative:form\\formadmin\\formquanlygiamgialist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormEditMember.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormEditMember.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormEditMember.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormEditMember.cs",
+              "RelativeToolTip": "Form\\FormAdmin\\FormEditMember.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAA5wIMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:42:23.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormEditMember.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormEditMember.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormEditMember.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormEditMember.cs [Design]",
+              "RelativeToolTip": "Form\\FormAdmin\\FormEditMember.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:42:22.517Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormEditVoucher.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormEditVoucher.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormEditVoucher.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormEditVoucher.cs [Design]",
+              "RelativeToolTip": "Form\\FormAdmin\\FormEditVoucher.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:42:20.836Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormMember.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormMember.Designer.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormMember.Designer.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormMember.Designer.cs",
+              "RelativeToolTip": "Form\\FormAdmin\\FormMember.Designer.cs",
+              "ViewState": "AgIAAAUCAAAAAAAAAAArwBICAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:38:50.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormTrangChuAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormTrangChuAdmin.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormTrangChuAdmin.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormTrangChuAdmin.cs",
+              "RelativeToolTip": "Form\\FormAdmin\\FormTrangChuAdmin.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAUwDsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:36:55.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VoucherAdminService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\BusinessLogicLayer\\Services\\VoucherAdminService.cs",
+              "RelativeDocumentMoniker": "BusinessLogicLayer\\Services\\VoucherAdminService.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\BusinessLogicLayer\\Services\\VoucherAdminService.cs",
+              "RelativeToolTip": "BusinessLogicLayer\\Services\\VoucherAdminService.cs",
+              "ViewState": "AgIAAGsBAAAAAAAAAAAuwHcBAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:35:23.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormQuanLyGiamGiaList.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormQuanLyGiamGiaList.Designer.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormQuanLyGiamGiaList.Designer.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormQuanLyGiamGiaList.Designer.cs",
+              "RelativeToolTip": "Form\\FormAdmin\\FormQuanLyGiamGiaList.Designer.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAIAwwMwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:26:44.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormQuanLyGiamGiaList.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormQuanLyGiamGiaList.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormQuanLyGiamGiaList.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormQuanLyGiamGiaList.cs",
+              "RelativeToolTip": "Form\\FormAdmin\\FormQuanLyGiamGiaList.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAD4v30AAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:24:13.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormQuanLyGiamGiaList.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormQuanLyGiamGiaList.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormQuanLyGiamGiaList.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormQuanLyGiamGiaList.cs [Design]",
+              "RelativeToolTip": "Form\\FormAdmin\\FormQuanLyGiamGiaList.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:24:12.597Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormMember.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormMember.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormMember.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormMember.cs",
+              "RelativeToolTip": "Form\\FormAdmin\\FormMember.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAuwFoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:22:00.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormMember.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormMember.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormMember.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormMember.cs [Design]",
+              "RelativeToolTip": "Form\\FormAdmin\\FormMember.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:18:15.667Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormQuanLy.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormQuanLy.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormQuanLy.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormQuanLy.cs",
+              "RelativeToolTip": "Form\\FormAdmin\\FormQuanLy.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAywIcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:14:32.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormQuanLy.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormQuanLy.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormQuanLy.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormQuanLy.cs [Design]",
+              "RelativeToolTip": "Form\\FormAdmin\\FormQuanLy.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:13:54.582Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormTrangChuAdmin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormTrangChuAdmin.cs",
+              "RelativeDocumentMoniker": "Form\\FormAdmin\\FormTrangChuAdmin.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\DoAnDemo\\Form\\FormAdmin\\FormTrangChuAdmin.cs [Design]",
+              "RelativeToolTip": "Form\\FormAdmin\\FormTrangChuAdmin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:11:08.841Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
